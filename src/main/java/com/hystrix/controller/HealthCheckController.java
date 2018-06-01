@@ -32,10 +32,10 @@ public class HealthCheckController {
 		System.out.println("inside the controller...");
 		//this.model = model;
 		this.restTemplate = new RestTemplate();
-//		this.restTemplate.exchange("https://bookingmicroservice.herokuapp.com/api/booking/health",
-//				HttpMethod.GET, null, Object.class);
-		this.restTemplate.exchange("http://localhost:1010/health",
+		this.restTemplate.exchange("https://bookingmicroservice.herokuapp.com/api/booking/health",
 				HttpMethod.GET, null, Object.class);
+//		this.restTemplate.exchange("http://localhost:1010/health",
+//				HttpMethod.GET, null, Object.class);
 		model.addAttribute("message", "server is up and running...");
 		return "index";
 	}
