@@ -22,6 +22,7 @@ public class HealthCheckCommand extends HystrixCommand<String>{
 	@Override
 	protected String run() throws Exception {
 		System.out.println("inside run method of command");
+		System.out.println("");
 		this.restTemplate = new RestTemplate();
 		this.restTemplate.exchange("http://localhost:1010/health", HttpMethod.GET, null, Object.class);
 		return "server is up and running...";
