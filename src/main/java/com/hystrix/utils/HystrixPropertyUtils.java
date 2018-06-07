@@ -2,6 +2,8 @@ package com.hystrix.utils;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Properties;
 import org.apache.commons.configuration.AbstractConfiguration;
@@ -26,5 +28,5 @@ public class HystrixPropertyUtils {
 		for(Entry<Object, Object> property : hystrixProperties.entrySet())
 			hystrixConfigurationManager.setProperty(property.getKey().toString(), property.getValue().toString());
 	}
-
+	
 }
